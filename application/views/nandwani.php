@@ -65,13 +65,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 </style>
 
-<h1>Now login with the past details</h1>
-<form action="<?php echo base_url().'index.php/welcome/validing'; ?>" method="post">
-	
-<h5>Address:</h5>
-<input type="text" name="address" value="" size="50" />
-<button type="sumbit" value="submit">validate</button>
-
-</form>
+<h1>DATABASE INTO TABLE FORMAT</h1>
+<table border="1" align="center" cellpadding="6px" cellspacing="3px">
+     <tr>
+        <th><center><strong>ADRESS:</strong></th>
+        <th><center><strong>E-mail:</strong></th>
+		<th><center><strong>E-mail:</strong></th>   
+    </tr> 
+     <?php
+      foreach($userdata as $k=>$post){?>
+     <tr>
+          <td><?php echo $post->adress;?></td>
+          <td><?php echo $post->email;?></td>
+          <td><?php echo $post->phonenumber;?></td>
+      </tr>     
+  <?php } ?>
 </body>
 </html>

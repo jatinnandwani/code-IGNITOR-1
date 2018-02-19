@@ -20,10 +20,34 @@ class welcome_model extends CI_Model {
 	 */
 
 
-	public function save($name,$address,$email,$phonenumber){
+	public function save($address,$email,$phonenumber){
 		$table = "userform";
-		$query = "INSERT INTO $table (name,adress,email,phonenumber) VALUES ('".$name."','".$address."','".$email."','".$phonenumber."')"; 
+		$query = "INSERT INTO $table (adress,email,phonenumber) VALUES ('".$address."','".$email."','".$phonenumber."')"; 
 		$this->db->query($query);
 	}
 
+	public function validing($address){
+		$table = "userform";
+		$query = "SELECT * FROM $table WHERE adress='".$address."'"; 
+		$this->db->query($query);
+
+	}
+	public function update($address,$number){
+		$table = "userform";
+		$query = "UPDATE $table SET phonenumber='".$number."' where adress='".$address."'"; 
+        $this->db->query($query);
+	
+	}
+
+	public function display($address,$email,$number){
+		$table = "userform";
+  		$query ="SELECT * FROM userform";
+	    $this->db->query($query);
+	}
+	public function getdata(){
+		$table = "userform";
+  		$query ="SELECT * FROM userform";
+	    $resultdata= $this->db->query($query);
+	    return $resultdata->result();
+	}
 }

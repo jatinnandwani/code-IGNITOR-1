@@ -69,8 +69,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 <form action="<?php echo base_url().'index.php/welcome/save'; ?>" method='post'>
-<h5>Username:</h5>
-<input type="text" name="name" value="" size="50" required />
 
 <h5>Address:</h5>
 <input type="text" name="address" value="" size="50" />

@@ -60,17 +60,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	#container {
 		margin: 10px; 
-		border: 1px solid #D0D0D0;
+		border: 1px solid black;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
-</style>
+	</style>
+</grey>
+<body style="color:#213; background-color:lightblue">
+<div id="container">
+<form action="<?php echo base_url().'index.php/welcome/update'; ?>" method='post'>
 
-<h1>Now login with the past details</h1>
-<form action="<?php echo base_url().'index.php/welcome/validing'; ?>" method="post">
-	
 <h5>Address:</h5>
 <input type="text" name="address" value="" size="50" />
-<button type="sumbit" value="submit">validate</button>
+
+<h5>Phone Number:</h5>
+
+<input type="text" name="phonenumber" value="" size="50" />
+
+<br>
+<br>
+<button type="submit" value="Submit"/>UPDATE</button>
+</div>
+
 
 </form>
 </body>
